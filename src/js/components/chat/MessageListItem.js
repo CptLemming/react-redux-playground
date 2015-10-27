@@ -6,7 +6,7 @@ class MessageListItem extends React.Component {
     createdAt: React.PropTypes.string.isRequired,
     user: React.PropTypes.shape({
       username: React.PropTypes.string.isRequired
-    })
+    }).isRequired
   }
 
   constructor() {
