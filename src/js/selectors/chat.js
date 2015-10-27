@@ -1,10 +1,14 @@
-import { createSelector } from 'reselect'
+import { createSelector } from 'reselect';
+import moment from 'moment';
 
 function formatMessages(messages, users) {
   return messages.map((message) => {
     const user = users.find((user) => user.id === message.userId) || { username: 'Unknown' };
+    const createdAt = moment(message.createdAt).format('MMMM Do YYYY, h:mm:ss a');
+
     return {
       ...message,
+      createdAt,
       user
     }
   });

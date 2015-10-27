@@ -3,7 +3,7 @@ import React from 'react';
 class MessageListItem extends React.Component {
   static propTypes = {
     message: React.PropTypes.string.isRequired,
-    createdAt: React.PropTypes.number.isRequired,
+    createdAt: React.PropTypes.string.isRequired,
     user: React.PropTypes.shape({
       username: React.PropTypes.string.isRequired
     })
