@@ -16,7 +16,8 @@ const mapDispatchToProps = (dispatch) => ({
 export class ChatView extends React.Component {
   static propTypes = {
     actions  : React.PropTypes.object,
-    chat     : React.PropTypes.object
+    users    : React.PropTypes.array,
+    messages : React.PropTypes.array
   }
 
   constructor() {
@@ -39,9 +40,9 @@ export class ChatView extends React.Component {
       <div className='container text-center'>
         <h1>Chat demo</h1>
 
-        <UserList users={this.props.chat.users} />
+        <UserList users={this.props.users} />
 
-        <MessageList messages={this.props.chat.messages} />
+        <MessageList messages={this.props.messages} />
 
         <MessageInput sendMessage={this.sendMessage} />
       </div>
